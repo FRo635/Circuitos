@@ -1,10 +1,10 @@
-module mux(s0, s1, s2, s3, y)
+module mux(d0, d1, d2 , d3, s0, s1, y);
 
-    input = s0, s1, s2, s3
+    input d0, d1, d2, d3, s0, s1;
 
-    output reg Y;
+    output y;
 
-    assign Y  =
+    assign y = s0 ? d0 : d1 : d2 : d3;
 
 
 endmodule
