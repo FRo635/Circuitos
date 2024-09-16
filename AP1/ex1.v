@@ -1,11 +1,6 @@
-module semaforo(a, b, vdA, vA, vdB, vB);
+module e1(input a, input b, output sA, output sB);
 
-    input a, b;
-    output vA, vdB, vB
-
-    assign vdA = a;
-    assign vA = ~a & b;
-    assign vdB = ~a & b;
-    assign vB = b;
+    assign sA = a || (~a && ~b);
+    assign sB = ~a && b;
 
 endmodule
